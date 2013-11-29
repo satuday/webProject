@@ -28,14 +28,17 @@
        Modernizr enables HTML5 elements & feature detects for optimal performance.
        Create your own custom Modernizr build: www.modernizr.com/download/ -->
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body id="top">
   <header>
 <div id="network">
             <div class="center-wrapper">
-                <div class="left">23/11/2013 <span class="text-separator">|</span> <span class="quiet">794 users online</span></div>
+                <div class="left"><script>var d = new Date(); document.write(d.toLocaleDateString());
+                                  </script> <span class="text-separator">|</span> <span class="quiet">794 users online</span></div>
                 <div class="right" id="toolbar">
-<a href="/Admin/DashBoard">Go to administration board</a>                </div>
+</div>
                 <div class="clearer">&nbsp;</div>
             </div>
         </div>
@@ -43,14 +46,17 @@
     <div class="clearer">&nbsp;</div>
     <div id="site-title">
         <h1>
-            <a href="/">Magazine Website</a>
+            <a href="/" style="font-family:'Buxton Sketch', 'Comic Sans MS', 'sans-serif';"><img src="img/whatisprogramming1.jpg" height="150px" width="150px" />The Art of Code</a>
         </h1>
     </div>
     <div id="navigation">
         <div id="main-nav">
             <ul class="tabbed">
-                    <li class="current-tab">
-                        <a href="/Home/Category/1">Sport</a>
+                     <li class="current-tab">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="">
+                        <a href="#" onclick="clientSideInclude('main-left', 'intro.html')">Programming Concepts</a>
                     </li>
                     <li class="">
                         <a href="/Home/Category/2">Fashion</a>
@@ -61,18 +67,6 @@
                     <li class="">
                         <a href="/Home/Category/4">Politics</a>
                     </li>
-                    <li class="">
-                        <a href="/Home/Category/5">Movies</a>
-                    </li>
-                    <li class="">
-                        <a href="/Home/Category/6">Music</a>
-                    </li>
-                    <li class="">
-                        <a href="/Home/Category/7">News</a>
-                    </li>
-                    <li class="">
-                        <a href="/Home/Category/8">Culture</a>
-                    </li>
             </ul>
             <div class="clearer">&nbsp;</div>
         </div>
@@ -82,57 +76,25 @@
 <div id="site" class="center-wrapper">
 <div class="main" id="main-two-columns">
     
-    <div class="left" id="main-left">
-    <div class="post">
-        <div class="post-title">
-            <h2>
-                <a href="/Home/Details/8">Sample article</a>
-            </h2>
-        </div>
-        <div class="post-date">19/06/2012 by thangchung</div>
-        <div class="post-body">
-            <p><a href="#"><img src="/img/Koala.jpg" alt="Koala.jpg" class="bordered" width="510" height="233" ></a></p>
-            <p style="margin: 0px 0px 10px; padding: 0px; border: 0px; outline: 0px; font-weight: normal; font-style: normal; font-size: 16px; font-family: 'Segoe UI', 'Segoe WP', Arial, sans-serif; vertical-align: baseline; line-height: 22px; color: rgb(51, 51, 51); font-variant: normal; letter-spacing: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">
-	In ASP.NET MVC 2, we shipped both client- and server-side validation support. The client-side validation that we included in MVC 2 was a custom validation system written against ASP.NET Ajax. We also included an experimental version written against jQuery in the MVC Futures project.</p>
-<p style="margin: 0px 0px 10px; padding: 0px; border: 0px; outline: 0px; font-weight: normal; font-style: normal; font-size: 16px; font-family: 'Segoe UI', 'Segoe WP', Arial, sans-serif; vertical-align: baseline; line-height: 22px; color: rgb(51, 51, 51); font-variant: normal; letter-spacing: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">
-	In ASP.NET MVC 3 Beta, we&rsquo;ve updated the runtime to enable a feature we&rsquo;re calling &ldquo;Unobtrusive Client Validation&rdquo;. We have also created a consumer for these unobtrusive client validation attributes that uses jQuery and jQuery Validate to perform the validation on our behalf.</p>
-
-            <a Class="more" href="/Home/Details/8">Read more &gt;&gt;</a>
-        </div>
-    </div>
-    <div class="content-separator"></div>
-    
-        <div class="post">
-            <a href="#"><img src="/Content/themes/base/ClientImages/" alt="" class="left bordered" width="152" height="119" ></a>
-            <h3>
-                <a href="/Home/Details/1">This is just demo news</a>
-            </h3>
-            <p>
-	Police in the restive Indonesian province of Papua shoot dead separatist leader Mako Tabuni, sparking violent protests by locals. 1</p>
-
-            <a Class="more" href="/Home/Details/1">Read more &gt;&gt;</a>
-            <div class="clearer">&nbsp;</div>
-        </div>
-        <div class="content-separator"></div>
-        <div class="post">
-            <a href="#"><img src="/Content/themes/base/ClientImages/news-image-med-2.jpg" alt="news-image-med-2.jpg" class="left bordered" width="152" height="119" /></a>
-            <h3>
-                <a href="/Home/Details/2">Article title</a>
-            </h3>
-            Integer diam elit, condimentum ac semper ut, tincidunt non diam. Ut congue rutrum justo at commodo. Aenean euismod tincidunt lorem scelerisque euismod.
-            <a Class="more" href="/Home/Details/2">Read more &gt;&gt;</a>
-            <div class="clearer">&nbsp;</div>
-        </div>
-        <div class="content-separator"></div>
-        <div class="post">
-            <a href="#"><img src="/Content/themes/base/ClientImages/news-image-med-3.jpg" alt="news-image-med-3.jpg" class="left bordered" width="152" height="119" /></a>
-            <h3>
-                <a href="/Home/Details/5">Second Article Title</a>
-            </h3>
-            Sed congue lacinia leo, sed dignissim odio pharetra vel. Fusce a dignissim dui. Fusce semper porttitor enim dapibus venenatis.
-            <a Class="more" href="/Home/Details/5">Read more &gt;&gt;</a>
-            <div class="clearer">&nbsp;</div>
-        </div>
+    <div class="left" id="main-left" >
+ <p>
+    <b> Programming Concepts</b> are essentially some basic rules of programming. They are there as guidelines as to what you'll 
+     need to know before taking on your own programming projects. They are aimed at beginners So they start at the very
+     beginning levels of programming and then push the knowledge forward to more complex programming concepts as you can see below.
+     </p>
+<p>
+What follows is a level based list of concepts that are covered in these pages. Typically, by reading the 
+    subjects here you can put yourself at the level you feel comfortable with in the list and take your studies
+     from there. Some might start at the very first item, others might start in the middle of that list, it all 
+    depends on where you currently stand in the field of programming.
+    </p>
+        <p>
+The main goal is to first explain the theory behind the concept and then follow that 0.with implementation examples, 
+            in more than one programming language to give you at least one good example of how to use the concept in your 
+            programming projects. As such, whenever needed, examples will be carefully selected based on real use situations 
+            and problems so that you can relate what you learn here to what you might need it for.
+ </p>
+        
         <div class="content-separator"></div>
     
 </div>
@@ -141,69 +103,50 @@
     <div class="right sidebar" id="sidebar">
     <div class="section">
         <div class="section-title">
-            <div class="left">Latest News</div>
-            <div class="right"><img src="img/icon-time.gif" width="14" height="14" alt="" /></div>
+            <div class="left">Topics</div>
+            
             <div class="clearer">&nbsp;</div>
         </div>
         <div class="section-content">
             <ul class="nice-list">
                           <li>
                               <div class="left">
-                                  <a href="/Home/Details/8">Sample article</a>
+                                  <a href="#" onclick="clientSideInclude('main-left', 'intro.html');">Introduction</a>
                               </div>
-                              <div class="right">14:32</div>
                               <div class="clearer">&nbsp;</div>
-                          </li>    
+                          </li>  
+                                          <li>
+                              <div class="left">
+                                  <a href="#" onclick="clientSideInclude('main-left', 'program-structure.html');">Program Structure</a>
+                              </div>
+                              <div class="clearer">&nbsp;</div>
+                          </li>      
+                
                           <li>
                               <div class="left">
-                                  <a href="/Home/Details/1">This is just demo news</a>
+                                  <a href="#" onclick="clientSideInclude('main-left', 'variables.html');">Variables</a>
                               </div>
-                              <div class="right">00:00</div>
                               <div class="clearer">&nbsp;</div>
-                          </li>    
+                          </li>       
                           <li>
                               <div class="left">
-                                  <a href="/Home/Details/2">Article title</a>
+                                  <a href="#" onclick="clientSideInclude('main-left', 'logic-and-alg.html');">Boolean Logic and Algebra</a>
                               </div>
-                              <div class="right">00:00</div>
                               <div class="clearer">&nbsp;</div>
                           </li>    
-                          <li>
+                                        <li>
                               <div class="left">
-                                  <a href="/Home/Details/5">Second Article Title</a>
+                                  <a href="#" onclick="clientSideInclude('main-left', 'loops.html');">Iterative Constructs (Loops)</a>
                               </div>
-                              <div class="right">00:00</div>
                               <div class="clearer">&nbsp;</div>
-                          </li>    
-                <li><a href="#" class="more">Browse all &#187;</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="section">
-        <div class="section-title">Most Viewed</div>
-        <div class="section-content">
-            <ul class="nice-list">
-                    <li>
-                        <span class="quiet">1.</span> 
-                        <a href="/Home/Details/2">Article title</a> 
-                        (31 times)
-                    </li>
-                    <li>
-                        <span class="quiet">2.</span> 
-                        <a href="/Home/Details/5">Second Article Title</a> 
-                        (22 times)
-                    </li>
-                    <li>
-                        <span class="quiet">3.</span> 
-                        <a href="/Home/Details/8">Sample article</a> 
-                        (10 times)
-                    </li>
-                    <li>
-                        <span class="quiet">4.</span> 
-                        <a href="/Home/Details/1">This is just demo news</a> 
-                        (9 times)
-                    </li>
-                <li><a href="#" class="more">Browse all &#187;</a></li>
+                          </li> 
+                                        <li>
+                              <div class="left">
+                                  <a href="#" onclick="clientSideInclude('main-left', 'tree.html');">Tree Structures</a>
+                              </div>
+                              <div class="clearer">&nbsp;</div>
+                          </li> 
+               
             </ul>
         </div>
     </div>
@@ -317,6 +260,10 @@
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/ClientSideInclude.js"></script>
+    <script src="js/libs/jquery-ui-1.10.3.min.js"></script>
 
   <!-- scripts concatenated and minified via build script -->
   <script src="js/plugins.js"></script>

@@ -266,8 +266,12 @@ img.alignright, img.right {margin: 0 0 1em 1.5em;}
 
 /* Floats */   
 
-.left,.alignleft {float: left;}
-.right,.alignright {float: right;}
+.left,.alignleft {
+    width:70%;
+    float: left;}
+.right,.alignright {
+    width:23%;
+    float: right;}
 
 .clear,.clearer {clear: both;}
 .clearer {
@@ -353,7 +357,8 @@ img.alignright, img.right {margin: 0 0 1em 1.5em;}
 /* General */
 .center-wrapper {
 	margin: 0 auto;
-	width: 980px;
+	width: 80%;
+    min-width:980px;
 }
 
 /* Network */
@@ -395,7 +400,7 @@ img.alignright, img.right {margin: 0 0 1em 1.5em;}
 
 /* Site title */
 #site-title {
-	font: normal 1.6em serif;
+	font: normal 3.6em 'Buxton Sketch';
 	border-bottom: 1px solid #CCC;
 	padding-bottom: 24px;
 }

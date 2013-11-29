@@ -1,0 +1,131 @@
+﻿    <div class="post">
+        <div class="post-title">
+            <h2>Variable Declaration
+            </h2>
+        </div>
+        <div class="post-body" style="font-size: 16px; font-family: 'Segoe UI', 'Segoe WP', Arial, sans-serif;">
+<p>
+    Variables are place holders for data a program might use or manipulate. Variables are given names so that 
+    we can assign values to them and refer to them later to read the values. Variables typically store values of a given type. Types generally include:
+</p>
+            <ul>
+                <li>
+                    Integer – to store integer or “whole” numbers</li>
+<li>Real – to store real or fractional numbers (also called float to indicate a floating point number)</li>
+<li>Character – A single character such as a letter of the alphabet or punctuation.</li>
+<li>String – A collection of characters
+                </li>
+            </ul>
+            <p>
+                In order to use a variable within a program, the compiler needs to know in advance the type
+                 of data that will be stored in it. For this reason, we declare the variables at the start of the program. Variable declaration 
+                consists of giving a new name and a data type for the variable. This is normally done at the very start of the program.
+            </p>
+            <p>
+                In the following example programs, variables of different types are declared and used in the programs.
+            </p>
+            <table border="" cellpadding="5">
+ <tbody>
+<tr>
+<th>Language</th>
+<th>Example program</th>
+</tr>
+<tr>
+<td>“C”</td>
+<td>
+<pre>#include &lt;stdio.h&gt;
+void main() {
+   int age;
+   float salary;
+   char middle_initial;
+   age = 21;
+   salary = 29521.12;
+   middle_initial = "K";
+   printf("I am %d years old ", age);
+   printf("I make %8.2f per year " salary);
+   printf("My middle initial is %c ", middle_initial);
+}</pre>
+</td>
+</tr>
+<tr>
+<td>Pascal</td>
+<td>
+<pre>program myexample (output);
+   var age: integer;
+   salary: real;
+   middle_initial: char;
+begin 
+   age := 21;
+   salary := 29521.12;
+   middle_initial := 'K';
+   writeln('I am ', age, ' years old');
+   writeln('I make ', salary, ' per year');
+   writeln('My middle initial is ', middle_initial);
+end.</pre>
+</td>
+</tr>
+<tr>
+<td>Oracle PL/SQL</td>
+<td>
+<pre>CREATE OR REPLACE PROCEDURE myexample AS
+    age NUMBER;
+ &nbsp; &nbsp;salary NUMBER;
+ &nbsp; &nbsp;middle_initial CHAR(1);
+BEGIN
+   age := 21;
+  &nbsp;salary := 29521.12;
+&nbsp; &nbsp;middle_initial := 'K';
+&nbsp; &nbsp;DBMS_OUTPUT.PUT_LINE('I am ' || age || ' years old');
+&nbsp; &nbsp;DBMS_OUTPUT.PUT_LINE('I make ' || TO_CHAR(salary, '99999.99') || ' per year');
+   DBMS_OUTPUT.PUT_LINE('My middle initial is ' || middle_initial);
+END;</pre>
+</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>
+<pre>class myexample {
+   public static void main (String args []) {
+      int age; 
+      double salary;
+      String middle_initial;
+      age = 21;
+      salary = 29521.12;
+      middle_initial = "K";
+      System.out.println ("I am " + age + " years old ");
+      System.out.println ("I make " + salary + " per year");
+      System.out.println ("My middle initial is " + middle_initial);
+   }
+}</pre>
+</td>
+</tr>
+<tr>
+<td>Perl</td>
+<td>
+<pre>#!/usr/local/bin/perl $
+     age = 21; 
+     $salary = 29521.12; 
+     $middle_initial = "K"; 
+     print "I am " . $age . " years old "; 
+     print "I make " . $salary . " per year "; 
+     print "My middle initial is " . $middle_initial;</pre>
+</td>
+</tr>
+<tr>
+<td>Basic</td>
+<td>
+<pre>Dim age AS Integer 
+Dim salary AS Decimal 
+Dim middle_initial As String 
+age = 21 
+salary = 29521.12 
+middle_initial = "K" 
+print "I am " &amp; age &amp; " years old " 
+print "I make " &amp; $salary &amp; " per year " 
+print "My middle initial is " &amp; $middle_initial</pre>
+</td>
+</tr>
+</tbody>
+</table>
+        </div>
+    </div>   
