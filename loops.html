@@ -1,37 +1,204 @@
 ﻿    <div class="post">
         <div class="post-title">
             <h2>
-                Introduction 
-
+                Iterative Constructs (Loops)
             </h2>
         </div>
         <div class="post-body" style="font-size: 14px; font-family: 'Helvetica', 'Segoe UI', 'Segoe WP', Arial, sans-serif;">
-            <p><img src="/img/Programming-concepts.jpg" alt="Koala.jpg"  ></p>
-            <p>Computer programs are collections of instructions that tell a computer how to interact with the user, 
-                interact with the computer hardware and process data. The first programmable computers required the programmers 
-                to write explicit instructions to directly manipulate the hardware of the computer. This “machine language” 
-                was very tedious to write by hand since even simple tasks such as printing some output on the screen require 10 or 20 
-                machine language commands. Machine language is often referred to as a “low level language” since the code directly manipulates 
-                the hardware of the computer.</p>
-            <p>By contrast, higher level languages such as “C”, C++, Pascal, Cobol, Fortran, ADA and Java are called “compiled languages”. 
-                In a compiled language, the programmer writes more general instructions and a compiler (a special piece of software) automatically 
-                translates these high level instructions into machine language. The machine language is then executed by the computer. 
-                A large portion of software in use today is programmed in this fashion.
-            </p>
-            <p>
-            We can contrast compiled programming languages with interpreted programming languages. In an interpreted programming language, 
-                the statements that the programmer writes are interpreted as the program is running. This means they are translated into machine 
-                language on the fly and then execute as the program is running. Some popular interpreted languages include Basic, Visual Basic, Perl, 
-                Python, and shell scripting languages such as those found in the UNIX, Linux and MacOS X environment.
-                </p>
-            <p>We can make another comparison between two different models of programming. In <b>structured programming</b>, blocks of 
-                programming statements (code) are executed one after another. Control statements (described later on) 
-                change which blocks of code are executed next.
-                </P> 
-            <p><b> object oriented programming</b>, data are contained in objects and are accessed using special 
-            methods (blocks of code) specific to the type of object. There is no single “flow” of the program as 
-            objects can freely interact with one another by passing messages.
-            </p>
-            <p>In this tutorial, we focus only on structured programming.</p>
+            <p>Virtually all programming languages have a facility to allow a section of code to be repeated (iterated or looped). There are several variations to iterative or looping constructs. For the most part, they fall into two categories: FOR loops and WHILE/DO loops.</p>
+            <h4>FOR loops</h4>
+            <p>Simple FOR loops iterate a specific number of times based on counting up (or down) on an integer variable. For example, if we want to do something 10 times, we can make a loop that counts up from 1 to 10 and put our work (what we want done) inside the loop.</p>
+            <p>Generally the three main parts that need to be written for a FOR loop are the initialization (the initial or starting value), the condition (the condition under which the loop will stop) and the increment (or decrement).<br>
+The other main part of the syntax is some indication of the start of the loop section and the end of the loop section. In many languages these are indicated by opening and closing curly brackets <tt>{</tt> and <tt>}</tt>.</p>
+            <p>Below are some examples for different languages:</p>
+            <table border="" cellpadding="5">
+<tbody>
+<tr>
+<th>Programming Language</th>
+<th>FOR loop</th>
+</tr>
+<tr>
+<td>"C", C++, Java, Perl</td>
+<td>
+<pre>for (<em>initialize</em>; <em>condition</em>; <em>increment</em>) {
+   <em>statements</em>
+}</pre>
+</td>
+</tr>
+<tr>
+<td>Pascal</td>
+<td>
+<pre>for <em>variable</em> := <em>low_integer</em> to <em>high_integer</em> do
+begin
+     <em>statements</em>
+end;</pre>
+</td>
+</tr>
+<tr>
+<td>Oracle PL/SQL</td>
+<td>
+<pre>FOR <em>variable</em> IN  <em>low_integer</em> .. <em>high_integer</em> LOOP
+   <em>statements</em>
+END LOOP;</pre>
+</td>
+</tr>
+<tr>
+<td>Basic</td>
+<td>
+<pre>For <em>variable</em> =  <em>low_integer</em> To <em>high_integer</em> 
+   <em>statements</em>
+Next <em>variable</em></pre>
+</td>
+</tr>
+</tbody>
+</table>
+
+            <p>In each of the following examples, the code will output "Hello World" 10 times.</p>
+            <table border="" cellpadding="5">
+<tbody>
+<tr>
+<th>Programming Language</th>
+<th>Example</th>
+</tr>
+<tr>
+<td>"C", C++</td>
+<td>
+<pre>for (i = 1; i &lt;= 10; i = i+1) { 
+     printf("Hello World\n"); 
+}</pre>
+</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>
+<pre>for (i = 1; i &lt;= 10; i = i+1) { 
+   System.out.println ("Hello World"); 
+}</pre>
+</td>
+</tr>
+<tr>
+<td>Pascal</td>
+<td>
+<pre>for i := 1 to 10 do 
+begin 
+   writeln('Hello World'); 
+end;</pre>
+</td>
+</tr>
+<tr>
+<td>Oracle PL/SQL</td>
+<td>
+<pre>FOR i IN 1..10 LOOP 
+   DBMS_OUTPUT.PUT_LINE('Hello World'); 
+END LOOP;</pre>
+</td>
+</tr>
+<tr>
+<td>Basic</td>
+<td>
+<pre>For i = 1 To 10 
+   Print "Hello World" 
+Next i</pre>
+</td>
+</tr>
+</tbody>
+</table>
+            <h4>WHILE and DO loops</h4>
+            <p>Like FOR loops, the WHILE and DO loops are also used to repeat a section of code for some number of times.  However while FOR loops basically specify some count, WHILE and DO loops repeat while a <em>condition</em> is true. The <em>condition</em> is a boolean expression that we can evaluate as either "true" or "false".   As soon as the <em>condition</em> evaluates to "false" the loop ends.</p>
+            <p>The main difference between a WHILE loop and a DO loop is where the  <em>condition</em> is checked. WHILE loops check the <em>condition</em> first, and then run the statements if true. DO loops run the statements first, then check if the <em>condition</em> is true.</p>
+            <p>Below are the general syntax </p>
+            <table border="" cellpadding="5">
+<tbody>
+<tr>
+<th>Programming Language</th>
+<th>WHILE loop</th>
+<th>DO loop</th>
+</tr>
+<tr>
+<td>"C", C++, Java, Perl</td>
+<td>
+<pre>while (<em>condition</em>) {
+   <em>statements</em>
+}</pre>
+</td>
+<td>
+<pre>do {
+   <em>statements</em>
+} while (<em>condition</em>)</pre>
+</td>
+</tr>
+<tr>
+<td>Pascal</td>
+<td>
+<pre>while (<em>condition</em>) do
+begin
+ <em>statements</em>
+end;</pre>
+</td>
+<td>
+<pre>Repeat
+ <em>statements</em>
+until  (<em>condition</em>); </pre>
+</td>
+</tr>
+<tr>
+<td>Oracle PL/SQL</td>
+<td>
+<pre>WHILE <em>condition</em> LOOP
+   <em>statements</em>
+END LOOP;</pre>
+</td>
+<td>
+<pre>LOOP
+   <em>statements</em>
+   EXIT WHEN  <em>condition</em> ;
+END LOOP;</pre>
+</td>
+</tr>
+<tr>
+<td>Basic</td>
+<td>
+<pre>While <em>condition</em>
+   <em>statements</em>
+Wend</pre>
+</td>
+<td>
+<pre>Do 
+   <em>statements</em>
+Loop While <em>condition</em></pre>
+</td>
+</tr>
+</tbody>
+</table>
+
+            <p>WHILE loops can be set up to emulate what a FOR loop is doing. For example, the following "C" or C++ code prints "Hello World" 10 times:</p>
+            <table border="" cellpadding="5">
+<tbody>
+<tr>
+<th>Programming Language</th>
+<th>FOR Loop</th>
+<th>&nbsp;&nbsp;</th>
+<th>WHILE Loop</th>
+</tr>
+<tr>
+<td>"C", C++</td>
+<td>
+<pre>for (i = 1; i &lt;= 10; i = i+1) { 
+     printf("Hello World\n"); 
+}</pre>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td>
+<pre>i = 1;
+while (i &lt;= 10) { 
+     printf("Hello World\n"); 
+     i = i + 1;
+}</pre>
+</td>
+</tr>
+</tbody>
+</table>
+
+
         </div>
     </div>   

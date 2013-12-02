@@ -452,8 +452,8 @@ img.alignright, img.right {margin: 0 0 1em 1.5em;}
 .main#main-three-columns #main-left {width: 520px;}
 
 .main#main-two-columns {background: url('/img/main-two-columns.gif') repeat-y right top;}
-.main#main-two-columns .sidebar {width: 260px;}
-.main#main-two-columns #main-left {width: 671px;}
+.main#main-two-columns .sidebar {min-width: 260px;}
+.main#main-two-columns #main-left {min-width: 671px;}
 
 .sidebar a {text-decoration: none;}
 .sidebar a:hover {text-decoration: underline;}

@@ -1,35 +1,29 @@
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html class="no-js" lang="en"> 
 <head>
   <meta charset="utf-8">
 
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/i/378 -->
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title></title>
   <meta name="description" content="">
 
-  <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta name="viewport" content="width=device-width">
 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
- <!-- <link rel="stylesheet" href="css/style.css">-->
 <link rel="stylesheet" href="css/site.css">
-  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-
-  <!-- All JavaScript at the bottom, except this Modernizr build.
-       Modernizr enables HTML5 elements & feature detects for optimal performance.
-       Create your own custom Modernizr build: www.modernizr.com/download/ -->
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function select(id) {
+            $("#nav").each(function (index) {
+                $(this).attr("class", "");
+            })
+           
+        }
+    </script>
+
 </head>
 <body id="top">
   <header>
@@ -51,21 +45,24 @@
     </div>
     <div id="navigation">
         <div id="main-nav">
-            <ul class="tabbed">
-                     <li class="current-tab">
+            <ul id="nav" class="tabbed">
+                     <li id="home" class="current-tab">
                         <a href="/">Home</a>
                     </li>
-                    <li class="">
-                        <a href="#" onclick="clientSideInclude('main-left', 'intro.html')">Programming Concepts</a>
+                    <li id="concepts" class="">
+                        <a href="#" onclick="
+                            clientSideInclude('main-two-columns', 'main.html');  
+                            clientSideInclude('main-left', 'intro.html'); 
+                            select('main-nav');">Programming Concepts</a>
                     </li>
-                    <li class="">
-                        <a href="/Home/Category/2">Fashion</a>
+                    <li id="fas" class="">
+                        <a href="#">Fashion</a>
                     </li>
-                    <li class="">
-                        <a href="/Home/Category/3">Books</a>
+                    <li id="bb" class="">
+                        <a href="#">Books</a>
                     </li>
-                    <li class="">
-                        <a href="/Home/Category/4">Politics</a>
+                    <li id="pol" class="">
+                        <a href="#">Politics</a>
                     </li>
             </ul>
             <div class="clearer">&nbsp;</div>
@@ -75,7 +72,6 @@
   </header>
 <div id="site" class="center-wrapper">
 <div class="main" id="main-two-columns">
-    
     <div class="left" id="main-left" >
  <p>
     <b> Programming Concepts</b> are essentially some basic rules of programming. They are there as guidelines as to what you'll 
@@ -95,68 +91,10 @@ The main goal is to first explain the theory behind the concept and then follow 
             and problems so that you can relate what you learn here to what you might need it for.
  </p>
         
-        <div class="content-separator"></div>
     
 </div>
-
-    
-    <div class="right sidebar" id="sidebar">
-    <div class="section">
-        <div class="section-title">
-            <div class="left">Topics</div>
-            
-            <div class="clearer">&nbsp;</div>
-        </div>
-        <div class="section-content">
-            <ul class="nice-list">
-                          <li>
-                              <div class="left">
-                                  <a href="#" onclick="clientSideInclude('main-left', 'intro.html');">Introduction</a>
-                              </div>
-                              <div class="clearer">&nbsp;</div>
-                          </li>  
-                                          <li>
-                              <div class="left">
-                                  <a href="#" onclick="clientSideInclude('main-left', 'program-structure.html');">Program Structure</a>
-                              </div>
-                              <div class="clearer">&nbsp;</div>
-                          </li>      
-                
-                          <li>
-                              <div class="left">
-                                  <a href="#" onclick="clientSideInclude('main-left', 'variables.html');">Variables</a>
-                              </div>
-                              <div class="clearer">&nbsp;</div>
-                          </li>       
-                          <li>
-                              <div class="left">
-                                  <a href="#" onclick="clientSideInclude('main-left', 'logic-and-alg.html');">Boolean Logic and Algebra</a>
-                              </div>
-                              <div class="clearer">&nbsp;</div>
-                          </li>    
-                                        <li>
-                              <div class="left">
-                                  <a href="#" onclick="clientSideInclude('main-left', 'loops.html');">Iterative Constructs (Loops)</a>
-                              </div>
-                              <div class="clearer">&nbsp;</div>
-                          </li> 
-                                        <li>
-                              <div class="left">
-                                  <a href="#" onclick="clientSideInclude('main-left', 'tree.html');">Tree Structures</a>
-                              </div>
-                              <div class="clearer">&nbsp;</div>
-                          </li> 
-               
-            </ul>
-        </div>
-    </div>
 </div>
-
-    
-    <div class="clearer">&nbsp;</div>
-
-</div>
-
+<div class="clearer">&nbsp;</div>
 
 <div id="dashboard">
 
@@ -164,32 +102,16 @@ The main goal is to first explain the theory behind the concept and then follow 
 				
         <div class="column-content">
 				
-            <div class="column-title">About Simple Magazine</div>
+            <div class="column-title">About us</div>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-            <a href="#">Learn more &#187;</a>
 
         </div>
 
     </div>
 
-    <div class="column left" id="column-2">
 
-        <div class="column-content">
-				
-            <div class="column-title">Follow Us (RSS)</div>
-
-            <ul class="plain-list">
-                <li><a href="#" class="feed">Lorem ipsum</a></li>
-                <li><a href="#" class="feed">Dolor sit amet</a></li>
-                <li><a href="#" class="feed">Consectetur</a></li>
-                <li><a href="#" class="feed">Adipicing elit</a></li>
-            </ul>
-
-        </div>
-
-    </div>
 
     <div class="column left" id="column-3">
 
@@ -254,10 +176,6 @@ The main goal is to first explain the theory behind the concept and then follow 
 
   </footer>
 
-
-  <!-- JavaScript at the bottom for fast page loading -->
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
@@ -265,18 +183,8 @@ The main goal is to first explain the theory behind the concept and then follow 
     <script src="js/ClientSideInclude.js"></script>
     <script src="js/libs/jquery-ui-1.10.3.min.js"></script>
 
-  <!-- scripts concatenated and minified via build script -->
+
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
-  <!-- end scripts -->
-
-  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-       mathiasbynens.be/notes/async-analytics-snippet -->
-  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
 </body>
 </html>

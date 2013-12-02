@@ -1,37 +1,24 @@
-﻿    <div class="post">
+﻿   <div class="post">
         <div class="post-title">
             <h2>
-                Introduction 
+                Boolean Logic and Boolean Algebra
 
             </h2>
         </div>
         <div class="post-body" style="font-size: 14px; font-family: 'Helvetica', 'Segoe UI', 'Segoe WP', Arial, sans-serif;">
-            <p><img src="/img/Programming-concepts.jpg" alt="Koala.jpg"  ></p>
-            <p>Computer programs are collections of instructions that tell a computer how to interact with the user, 
-                interact with the computer hardware and process data. The first programmable computers required the programmers 
-                to write explicit instructions to directly manipulate the hardware of the computer. This “machine language” 
-                was very tedious to write by hand since even simple tasks such as printing some output on the screen require 10 or 20 
-                machine language commands. Machine language is often referred to as a “low level language” since the code directly manipulates 
-                the hardware of the computer.</p>
-            <p>By contrast, higher level languages such as “C”, C++, Pascal, Cobol, Fortran, ADA and Java are called “compiled languages”. 
-                In a compiled language, the programmer writes more general instructions and a compiler (a special piece of software) automatically 
-                translates these high level instructions into machine language. The machine language is then executed by the computer. 
-                A large portion of software in use today is programmed in this fashion.
-            </p>
-            <p>
-            We can contrast compiled programming languages with interpreted programming languages. In an interpreted programming language, 
-                the statements that the programmer writes are interpreted as the program is running. This means they are translated into machine 
-                language on the fly and then execute as the program is running. Some popular interpreted languages include Basic, Visual Basic, Perl, 
-                Python, and shell scripting languages such as those found in the UNIX, Linux and MacOS X environment.
-                </p>
-            <p>We can make another comparison between two different models of programming. In <b>structured programming</b>, blocks of 
-                programming statements (code) are executed one after another. Control statements (described later on) 
-                change which blocks of code are executed next.
-                </P> 
-            <p><b> object oriented programming</b>, data are contained in objects and are accessed using special 
-            methods (blocks of code) specific to the type of object. There is no single “flow” of the program as 
-            objects can freely interact with one another by passing messages.
-            </p>
-            <p>In this tutorial, we focus only on structured programming.</p>
+<p>Boolean Algebra was invented by nineteenth century mathematician George Boole. In Boolean Algebra, mathematical expressions are evaluated to one of two values: True or False. Boolean logic is the mathematical logic that is fundamental to Boolean Algebra.</p>
+<p>Boolean logic is used throughout computer science. Understanding how to pose and evaluate Boolean logic expressions is a crucial skill for any programmer or indeed anyone who programs computers in a formal language (such as “C”, C++, Java, Pascal, Fortran, SQL, etc.) or in a macro language such as shell scripts or MS Excel formulas and macros.</p>
+            <p>This primer endeavors to introduce the topic of Boolean logic and demonstrates how it is used in a variety of situations.</p>
+            <p>Boolean logic is called a&nbsp;<em>Two Valued Logic</em>&nbsp;because an expression may only take on one of two values: True or False. An expression is some collection of logical operands and logical operators that are combined together.</p>
+            <p>In arithmetic, the operands are numbers and the operators are the familiar addition, subtraction, multiplication and division. In Boolean logic, the operands are statements (that can be proven True or False) and the operators are logical AND, OR and NOT.</p>
+            <p>For example consider this expression:&nbsp;<tt>4 &lt; 6</tt><br>
+clearly this expression is True since the number four is less than the number 6.</p>
+            <p>As another example, consider the following statement:<br>
+<em>I am 6 feet tall AND I am president of the United States</em></p>
+            <p>While it may be True that I am six feet tall (a fact that can be proven by measuring my height), it can certainly be shown that I am not the president of the United States. Therefore, according to Boolean logic, this entire sentence is&nbsp;<em>False</em>. Another way of saying this is: It is False that I am 6 feet tall AND I am the president of the United States.</p>
+            <p>Consider a similar sentence:<br>
+<em>I am 6 feet tall OR I am president of the United States</em></p>
+            <p>Notice in this case that only one of the parts of the sentence (separated by OR) need be True in order for the entire sentence to be considered True. Another way of saying this is: It is True that I am 6 feet tall OR I am the president of the United States.</p>
         </div>
     </div>   
+
