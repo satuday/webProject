@@ -15,14 +15,6 @@
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <script type="text/javascript">
-        function select(id) {
-            $("#nav").each(function (index) {
-                $(this).attr("class", "");
-            })
-           
-        }
-    </script>
 
 </head>
 <body id="top">
@@ -40,7 +32,8 @@
     <div class="clearer">&nbsp;</div>
     <div id="site-title">
         <h1>
-            <a href="/" style="font-family:'Buxton Sketch', 'Comic Sans MS', 'sans-serif';"><img src="img/whatisprogramming1.jpg" height="150px" width="150px" />The Art of Code</a>
+            <a href="./index.html" style="font-family:'Buxton Sketch', 'Comic Sans MS', 'sans-serif';">
+                <img src="img/whatisprogramming1.jpg" height="150px" width="150px" />The Art of Code</a>
         </h1>
     </div>
     <div id="navigation">
@@ -53,16 +46,19 @@
                         <a href="#" onclick="
                             clientSideInclude('main-two-columns', 'main.html');  
                             clientSideInclude('main-left', 'intro.html'); 
-                            select('main-nav');">Programming Concepts</a>
+                            select('concepts');">Programming Concepts</a>
                     </li>
-                    <li id="fas" class="">
-                        <a href="#">Fashion</a>
+                    <li id="Video" class="">
+                        <a href="#" onclick="clientSideInclude('main-two-columns', 'video.html'); 
+                            select('concepts');">Video</a>
                     </li>
                     <li id="bb" class="">
                         <a href="#">Books</a>
                     </li>
-                    <li id="pol" class="">
-                        <a href="#">Politics</a>
+                    <li id="About" class="">
+                        <a href="#" onclick="
+                            clientSideInclude('main-two-columns', 'about.html');
+                            select('About');">About us</a>
                     </li>
             </ul>
             <div class="clearer">&nbsp;</div>
@@ -148,43 +144,24 @@ The main goal is to first explain the theory behind the concept and then follow 
 
 <div id="footer">
 
-    <div class="left">&copy; 2010-2011 Simple Magazine <span class="text-separator">&rarr;</span> 
-        <a href="#">Home</a> 
-        
-            <span class="text-separator">|</span>
-            <a href="#">Sport</a>
-            <span class="text-separator">|</span>
-            <a href="#">Fashion</a>
-            <span class="text-separator">|</span>
-            <a href="#">Books</a>
-            <span class="text-separator">|</span>
-            <a href="#">Politics</a>
-            <span class="text-separator">|</span>
-            <a href="#">Movies</a>
-            <span class="text-separator">|</span>
-            <a href="#">Music</a>
-            <span class="text-separator">|</span>
-            <a href="#">News</a>
-            <span class="text-separator">|</span>
-            <a href="#">Culture</a>
+    <div class="left">&copy; 2013 The Art of Code        
+
     </div>
-    <div class="right">Provided By <a href="http://www.template4all.com/" title="Free Website Templates">Free Website Templates</a> | <a href="http://www.freethemes4all.com" title="Free Website Templates">Freethemes4all.com</a> Design by <a href="http://arcsin.se/">Arcsin</a></div>
+    <div class="right">Design by Felix Zhang | For educational purpose only.</div>
     <div class="clearer">&nbsp;</div>
 </div>
 </div>
   <footer>
 
   </footer>
-
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
     <script src="js/libs/bootstrap.min.js"></script>
-    <script src="js/ClientSideInclude.js"></script>
     <script src="js/libs/jquery-ui-1.10.3.min.js"></script>
-
-
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
+ <script src="js/ClientSideInclude.js"></script>
+
 </body>
 </html>
