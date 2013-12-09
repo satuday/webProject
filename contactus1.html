@@ -1,0 +1,57 @@
+﻿<div class="left" id="main-left" >
+<form action="/customer/portal/emails/pre_create" enctype="multipart/form-data" class="new_email" id="new_email" method="post" novalidate="novalidate">
+	<input id="authenticity_token" name="authenticity_token" type="hidden" value="0XH+JbZyBE+KaOVuULh4K2RwQuDQdbEBMfmTwxqR0OU=">
+
+          
+            <div class="input-block">
+              <span class="label">
+                Your name <span>(required)</span>
+              </span>
+              <div>
+                <input value="" id="interaction_name" maxlength="100" name="interaction[name]" type="text">
+              </div>
+            </div>
+            <div class="input-block">
+              <span class="label">
+                Your email address <span>(required)</span>
+              </span>
+              <div>
+                <input value="" id="interaction_email" maxlength="100" name="interaction[email]" type="text">
+              </div>
+            </div>
+           
+          <div class="input-block">
+            <span class="label">
+              Subject <span>(required)</span>
+            </span>
+            <div>
+              <input id="email_subject" maxlength="100" name="email[subject]" type="text" value="">
+            </div> 
+          </div> 
+          <div class="input-block">
+            <span class="label">
+              Message <span>(required)</span>
+            </span>
+            <div>
+              <textarea id="email_body" name="email[body]"></textarea>
+            </div>
+          </div>
+          <div class="input-block">
+            <span class="label">
+              File Attachment
+            </span>
+            <div>
+              <input name="case_attachment[attachment]" size="84" type="file">
+            </div>
+          </div><br>
+          
+        <input id="interaction_lat" name="interaction[lat]" type="hidden" value="40.923">
+<input id="interaction_lng" name="interaction[lng]" type="hidden" value="-73.998">
+<input id="interaction_city" name="interaction[city]" type="hidden" value="Bergenfield">
+<input id="interaction_region" name="interaction[region]" type="hidden" value="NJ">
+<input id="interaction_country" name="interaction[country]" type="hidden" value="USA">
+<input id="interaction_country_code" name="interaction[country_code]" type="hidden" value="US">
+
+<input id="email_submit" name="commit" type="submit" value="Submit Comment">
+</form>
+</div>
